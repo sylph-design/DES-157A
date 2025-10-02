@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to see the code functionality.</h2>
+
+    <script>
+        // This program takes a string and reverses the order of the letters of each word while keeping the length of each word the same and also maintaining punctuation.
+        var setString = "Greetings, I am your friendly example sentence.";
+        var newString = "";
+        var tempWord = "";
+        
+        // prints original string
+        console.log(setString);
+
+        // goes through each character in the string
+        for (var i = 0; i < setString.length; i++) {
+
+            // if the character isn't a punctuation or space, it adds the letter to the beginning of the tempWord string to spell the word backwards
+            if (setString[i] !== "," && setString[i] !== "." && setString[i] !== " ") {
+                tempWord = setString[i] + tempWord;
+            }
+            // if the character is a punctuation or space, the tempWord is completed through adding it to the newString and resetting. The punctuation is then added after
+            else {
+                newString += tempWord;
+                tempWord = "";
+                newString += setString[i]; 
+            }
+        }
+        // prints newString
+        console.log(newString);
+    </script>
+</body>
+</html>
