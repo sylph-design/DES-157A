@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+
+    <main>
+        <h2>Something Prediction</h2>
+        <p>Talking about something.</p>
+    </main>
+
+    <script>
+
+        //Prompts user for something they like and changes the text to a random prediction. Also prompts user for favorite color and changes the heading to match it.
+
+        var something = prompt("What is something you like?", "");
+        var favColor = prompt("What is your favorite color?", "");
+        var titles = document.querySelectorAll("h2");
+
+        for (var i = 0; i < titles.length; i++) {
+            titles[i].style.color = favColor;
+        }
+
+        function getPrediction () {
+            return Math.floor(4 * Math.random());
+        }
+
+        function replaceSomething (pred) {
+            if (pred == 0) {
+                document.querySelector("h2").innerHTML = `${something} is going to be splendid this year!`;
+                document.querySelector("p").innerHTML = `Good luck is coming up for ${something}, and we can all be joyous!`;
+            }
+            else if (pred == 1) {
+                document.querySelector("h2").innerHTML = `${something} is going to be good this year.`;
+                document.querySelector("p").innerHTML = `Nothing too crazy is going to happen, but overall ${something} is going to have a good year.`;
+            }
+            else if (pred == 2) {
+                document.querySelector("h2").innerHTML = `${something} is going to have an uneventful year.`;
+                document.querySelector("p").innerHTML = `Neither good nor bad things will happen with ${something}.`;
+            }
+            else {
+                document.querySelector("h2").innerHTML = `${something} is going to have a bad year.`;
+                document.querySelector("p").innerHTML = `Bad luck is on the horizon for ${something}. Keep safe.`;
+                console.log(pred);
+            }
+        }
+
+        replaceSomething(getPrediction());
+
+    </script>
+</body>
+</html>
