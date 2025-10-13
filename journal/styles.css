@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FAD173;
+    font-family: "Figtree";
+    color: #362C28;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 150%;
+    margin-bottom: 2rem;
+}
+
+a {
+    font-size: 1.2rem;
+    color: #6096BA;
+}
+
+article {
+    padding: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+date {
+    flex: 1 0 150px;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.articleContent {
+    flex: 15 0 200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+    background-color: #FFF5B2;
+    border-radius: 1rem;
+}
