@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackout Poetry Madlibs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Blackout Poem Madlibs</h1>
+    </header>
+    <main>
+        <div id="overlay" class="hidden">
+            <article>
+                <p></p>
+            </article>
+        </div>
+        <form>
+            <div id="formColumns">
+                <div>
+                    <label for="animal">Animal</label><br>
+                    <input type="text" id="animal" required><br>
+                    <label for="pluralNoun"></label>Plural Noun<br>
+                    <input type="text" id="pluralNoun" required><br>
+                    <label for="verb1"></label>Verb<br>
+                    <input type="text" id="verb1" required><br>
+                    <label for="verb2"></label>Verb<br>
+                    <input type="text" id="verb2" required><br>
+                </div>
+                <div>
+                    <label for="adverb"></label>Adverb<br>
+                    <input type="text" id="adverb" required><br>
+                    <label for="adjective"></label>Adjective<br>
+                    <input type="text" id="adjective" required><br>
+                    <label for="noun"></label>Noun<br>
+                    <input type="text" id="noun" required><br>
+                </div>
+            </div>
+            <input type="submit" id="submitButton" value="Generate Poem">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    background-image: url("images/bgBlackout.png");
+}
+
+h1 {
+    font-family: "Uncial Antiqua";
+    text-align: center;
+    padding: 1rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 5rem;
+    color: #F5F5F5;
+    background-color: #500808;
+    border-radius: 5rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 25%);
+}
+
+form {
+    background-color: #F5F5F5;
+    margin: 0rem 10rem 0rem 10rem;
+    padding: 3rem 5rem 5rem 5rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 25%);
+    font-family: "Literata";
+    font-size: 20px;
+    color: #500808;
+    border-radius: 1rem;
+    border: dashed;
+    position: relative;
+}
+
+#formColumns {
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #500808;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+}
+
+input[type="text"]:focus {
+    outline: 1px solid #500808;
+    box-shadow: 0px 0px 10px 0px #D78F8F;
+    transition: all 0.2s ease-in-out;
+}
+
+#submitButton {
+    margin-top: 2rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 1rem;
+    color: #F5F5F5;  
+    background-color: #500808;
+    padding: 0.8rem 2rem 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#submitButton:hover {
+    background-color: #D78F8F;
+    color:#500808;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 90%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#overlay article {
+    font-family: "Literata";
+    background-color: #F5F5F5;
+    background-image: url(images/paper.jpg);
+    padding: 2rem 5rem 5rem 5rem;
+    font-size: 25px;
+    line-height: 4rem;
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.hidden {
+    display: none;
+}
+
+mark {
+    background-color: black;
+}

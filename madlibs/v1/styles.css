@@ -25,6 +25,7 @@ form {
     color: #500808;
     border-radius: 1rem;
     border: dashed;
+    position: relative;
 }
 
 #formColumns {
@@ -55,8 +56,8 @@ input[type="text"]:focus {
 #submitButton {
     margin-top: 2rem;
     position: absolute;
-    right: 15rem;
-    bottom: 16rem;
+    right: 3rem;
+    bottom: 1rem;
     color: #F5F5F5;  
     background-color: #500808;
     padding: 0.8rem 2rem 1rem 2rem;
