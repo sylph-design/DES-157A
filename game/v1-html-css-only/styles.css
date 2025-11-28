@@ -1,0 +1,157 @@
+body {
+    background-image: repeating-conic-gradient(#571F1F 0% 25%, #741E1E 0% 50%);
+    background-position: 0 0, 32px 32px;
+    background-size: 64px 64px;
+    background-color: #c46262;
+    animation: bgUpLeft 3s linear infinite;
+    font-family: "Rowdies";
+}
+
+h1 {
+    text-align: center;
+    font-family: "Rowdies";
+    color: white;
+    font-size: 100px;
+}
+
+#grid {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+}
+
+#playerScores {
+    width: auto;
+    height: auto;
+    background-color: #D7A39F;
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+
+}
+
+#playerScores p {
+    font-size: 1.3rem;
+    color: #3C2510;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#actions {
+    width: auto;
+    height: 300px;
+    background-color: #D7A39F;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#turn {
+    height: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3C2510;
+}
+
+#diceInv {
+    height: auto;
+    flex: 2;
+    display: flex;
+    color: #3C2510;
+}
+
+.diceInvPics {
+    text-align: center;
+}
+
+.diceInvPics img {
+    width: 40px;
+}
+
+#buttons {
+    height: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#pass {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #695050;
+    color: white;
+}
+
+#roll {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #A82424;
+    color: white;
+}
+
+#rollingArea {
+    width: auto;
+    max-height: 300px;
+    background-color: #7E4F47;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border-radius: 10px;
+    border: 20px solid #D7A39F;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#rollingArea img {
+    width: 100px;
+    height: 100px;
+}
+
+#currentRoll {
+    width: auto;
+    height: auto;
+    background-color: #D7A39F;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#currentRoll p {
+    font-size: 1.6rem;
+    color: #3C2510;
+    text-align: center;
+}
+
+#quit {
+    margin-left: 15%;
+    font-family: "Rowdies";
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes bgUpLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -64px -64px;
+  }
+}
