@@ -1,0 +1,262 @@
+body {
+    background-image: repeating-conic-gradient(#571F1F 0% 25%, #741E1E 0% 50%);
+    background-position: 0 0, 32px 32px;
+    background-size: 64px 64px;
+    background-color: #c46262;
+    animation: bgUpLeft 3s linear infinite;
+    font-family: "Rowdies";
+}
+
+h1 {
+    text-align: center;
+    font-family: "Rowdies";
+    color: white;
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #3C2510;
+    text-align: center;
+}
+
+#grid {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+}
+
+#playerScores {
+    width: auto;
+    height: auto;
+    background-color: #D7A39F;
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+
+}
+
+#playerScores p {
+    font-size: 1.3rem;
+    color: #3C2510;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#actions {
+    width: auto;
+    height: 300px;
+    background-color: #D7A39F;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#turn {
+    height: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3C2510;
+}
+
+#diceInv {
+    height: auto;
+    flex: 2;
+    display: flex;
+    color: #3C2510;
+}
+
+.diceInvPics {
+    text-align: center;
+}
+
+.diceInvPics img {
+    width: 40px;
+}
+
+.diceInvPics:hover {
+    filter: brightness(10000%);
+    transition: all 1s;
+}
+
+#buttons {
+    height: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#start {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #A82424;
+    color: white;
+    transition: all 0.2s;
+}
+
+#start:hover {
+    background-color: #C94E4E;
+    transition: all 0.2s;
+}
+
+#pass {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #695050;
+    color: white;
+    display: none;
+    transition: all 0.2s;
+}
+
+#pass:hover {
+    background-color: #837171;
+    transition: all 0.2s;
+}
+
+#roll {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #A82424;
+    color: white;
+    display: none;
+    transition: all 0.2s;
+}
+
+#roll:hover {
+    background-color: #C94E4E;
+    transition: all 0.2s;
+}
+
+#ending {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#ending h2 {
+    padding-top: 1rem;
+}
+
+#playAgain {
+    margin: auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #A82424;
+    color: white;
+    transition: all 0.2s;
+    bottom: 0;
+}
+
+#playAgain:hover {
+    background-color: #C94E4E;
+    transition: all 0.2s;
+}
+
+#rollingArea {
+    width: auto;
+    max-height: 300px;
+    background-color: #7E4F47;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border-radius: 10px;
+    border: 20px solid #D7A39F;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#rollingArea img {
+    width: 100px;
+    height: 100px;
+    filter: brightness(10000%);
+}
+
+.rolling {
+	animation: roll 1.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+}
+
+#currentRoll {
+    width: auto;
+    height: auto;
+    background-color: #D7A39F;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#currentRoll p {
+    font-size: 1.6rem;
+    color: #3C2510;
+    text-align: center;
+}
+
+#quit {
+    margin-left: 15%;
+    font-family: "Rowdies";
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes bgUpLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -64px -64px;
+  }
+}
+
+@keyframes roll {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen
+and (min-width : 1200px) {
+
+    #diceInv {
+    height: auto;
+    flex: 2;
+    display: flex;
+    color: #3C2510;
+    justify-content: space-around;
+    }
+
+    .diceInvPics {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .diceInvPics img {
+        width: 40px;
+    }
+
+}

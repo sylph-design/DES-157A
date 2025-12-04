@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Pig</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>PIG</h1>
+    <main id="grid">
+
+        <div id="playerScores">
+            <p>Player 1: 0pts</p>
+            <p>Player 2: 0pts</p>
+        </div>
+
+        <div id="actions">
+            <div id="turn">
+                <p>Player 1's Turn</p>
+            </div>
+            <div id="diceInv">
+                <div class="diceInvPics">
+                    <img src="images/dice1.png" alt="dice face 1">
+                    <img src="images/dice1.png" alt="dice face 1">
+                    <p id="diceAmt1">x0</p>
+                </div>
+                
+                <div class="diceInvPics">
+                    <img src="images/dice2.png" alt="dice face 2">
+                    <img src="images/dice2.png" alt="dice face 2">
+                    <p id="diceAmt2">x0</p>
+                </div>
+
+                <div class="diceInvPics">
+                    <img src="images/dice3.png" alt="dice face 3">
+                    <img src="images/dice3.png" alt="dice face 3">
+                    <p id="diceAmt3">x0</p>
+                </div>
+                
+                <div class="diceInvPics">
+                    <img src="images/dice4.png" alt="dice face 4">
+                    <img src="images/dice4.png" alt="dice face 4">
+                    <p id="diceAmt4">x0</p>
+                </div>
+                
+                <div class="diceInvPics">
+                    <img src="images/dice5.png" alt="dice face 5">
+                    <img src="images/dice5.png" alt="dice face 5">
+                    <p id="diceAmt5">x0</p>
+                </div>
+                
+                <div class="diceInvPics">
+                    <img src="images/dice6.png" alt="dice face 6">
+                    <img src="images/dice6.png" alt="dice face 6">
+                    <p id="diceAmt6">x0</p>
+                </div>
+                
+            </div>
+            <div id="buttons">
+                <button id="start">Start Game</button>
+                <button id="pass">Pass</button>
+                <button id="roll">Roll</button>
+            </div>
+            <div id="ending">
+                <h2 id="endingMsg"></h2>
+                <button id="playAgain">Play Again?</button>
+            </div>
+        </div>
+
+        <div id="rollingArea">
+            <img src="images/dice1.png" alt="dice face 1" id="rollingDice1" class="notRolling">
+            <img src="images/dice1.png" alt="dice face 1" id="rollingDice2" class="notRolling">
+        </div>
+
+        <div id="currentRoll">
+            <p>Current Roll: 0</p>
+        </div>
+
+    </main>
+    <div id="quit"><p>Quit</p></div>
+</body>
+</html>
