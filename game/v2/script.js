@@ -57,6 +57,7 @@
         event.preventDefault();
 
         roll.disabled = true;
+        pass.disabled = true;
 
         rollingDice1.className = "rolling";
         rollingDice2.className = "rolling";
@@ -112,6 +113,7 @@
             checkWin();
 
             roll.disabled = false;
+            pass.disabled = false;
         }, 2000);
 
     });
