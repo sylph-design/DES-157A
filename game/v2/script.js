@@ -22,6 +22,11 @@
     let ending = document.querySelector("#ending");
     let endingMsg = document.querySelector("#endingMsg");
     let playAgain = document.querySelector("#playAgain");
+    let info = document.querySelector("#info");
+    let exitOverlay = document.querySelector("#exitOverlay");
+    let overlayBG = document.querySelector("#overlayBG");
+    let overlay = document.querySelector("#overlay");
+    let quit = document.querySelector("#quit");
 
     const gameData = {
     dice: ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"],
@@ -196,6 +201,19 @@
         gameData.diceInv6[0] = 0;
         gameData.diceInv6[1] = 0;
 
+        diceAmt1.innerHTML = `x${gameData.diceInv1[0]}`;
+        diceAmt2.innerHTML = `x${gameData.diceInv2[0]}`;
+        diceAmt3.innerHTML = `x${gameData.diceInv3[0]}`;
+        diceAmt4.innerHTML = `x${gameData.diceInv4[0]}`;
+        diceAmt5.innerHTML = `x${gameData.diceInv5[0]}`;
+        diceAmt6.innerHTML = `x${gameData.diceInv6[0]}`;
+        diceAmt1.innerHTML = `x${gameData.diceInv1[1]}`;
+        diceAmt2.innerHTML = `x${gameData.diceInv2[1]}`;
+        diceAmt3.innerHTML = `x${gameData.diceInv3[1]}`;
+        diceAmt4.innerHTML = `x${gameData.diceInv4[1]}`;
+        diceAmt5.innerHTML = `x${gameData.diceInv5[1]}`;
+        diceAmt6.innerHTML = `x${gameData.diceInv6[1]}`;
+
         rollingArea.innerHTML = `<img src="images/${gameData.dice[gameData.roll1 - 1]}" id="rollingDice1" class="notRolling"> <img src="images/${gameData.dice[gameData.roll2 - 1]}" id="rollingDice2" class="notRolling">`;
 
         playerScores.innerHTML = `<p>Player 1: ${gameData.score[0]}pts</p> <p>Player 2: ${gameData.score[1]}pts</p>`;
@@ -209,6 +227,68 @@
 
     //quit
 
+    quit.addEventListener("click", function(event) {
+        event.preventDefault();
 
+        gameData.score[0] = 0;
+        gameData.score[1] = 0;
+        gameData.roll1 = 1;
+        gameData.roll2 = 1;
+        gameData.rollSum = 0;
+        gameData.index = 0;
+        gameData.diceInv1[0] = 0;
+        gameData.diceInv1[1] = 0;
+        gameData.diceInv2[0] = 0;
+        gameData.diceInv2[1] = 0;
+        gameData.diceInv3[0] = 0;
+        gameData.diceInv3[1] = 0;
+        gameData.diceInv4[0] = 0;
+        gameData.diceInv4[1] = 0;
+        gameData.diceInv5[0] = 0;
+        gameData.diceInv5[1] = 0;
+        gameData.diceInv6[0] = 0;
+        gameData.diceInv6[1] = 0;
+
+        diceAmt1.innerHTML = `x${gameData.diceInv1[0]}`;
+        diceAmt2.innerHTML = `x${gameData.diceInv2[0]}`;
+        diceAmt3.innerHTML = `x${gameData.diceInv3[0]}`;
+        diceAmt4.innerHTML = `x${gameData.diceInv4[0]}`;
+        diceAmt5.innerHTML = `x${gameData.diceInv5[0]}`;
+        diceAmt6.innerHTML = `x${gameData.diceInv6[0]}`;
+        diceAmt1.innerHTML = `x${gameData.diceInv1[1]}`;
+        diceAmt2.innerHTML = `x${gameData.diceInv2[1]}`;
+        diceAmt3.innerHTML = `x${gameData.diceInv3[1]}`;
+        diceAmt4.innerHTML = `x${gameData.diceInv4[1]}`;
+        diceAmt5.innerHTML = `x${gameData.diceInv5[1]}`;
+        diceAmt6.innerHTML = `x${gameData.diceInv6[1]}`;
+
+        rollingArea.innerHTML = `<img src="images/${gameData.dice[gameData.roll1 - 1]}" id="rollingDice1" class="notRolling"> <img src="images/${gameData.dice[gameData.roll2 - 1]}" id="rollingDice2" class="notRolling">`;
+
+        playerScores.innerHTML = `<p>Player 1: ${gameData.score[0]}pts</p> <p>Player 2: ${gameData.score[1]}pts</p>`;
+
+        start.style.display = "block";
+        pass.style.display = "none";
+        roll.style.display = "none";
+
+    })
+
+
+    //info
+
+    info.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        overlayBG.style.display = "block";
+        overlay.style.display = "block";
+        exitOverlay.style.display = "block";
+    })
+
+    exitOverlay.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        overlayBG.style.display = "none";
+        overlay.style.display = "none";
+        exitOverlay.style.display = "none";
+    });
 
 })();
